@@ -31,13 +31,19 @@ class ProfileAttributeProvider
   def call
     [
       ActiveDynamic::AttributeDefinition.new('Life Story',
-                                             datatype: ActiveDynamic::DataType::Text,
-                                             default_value: 'default value for story',
-                                             required: true),
-      ActiveDynamic::AttributeDefinition.new('Age', datatype: ActiveDynamic::DataType::Integer),
+        ActiveDynamic::DataType::Text,
+        'default value for story',
+        true),
+      ActiveDynamic::AttributeDefinition.new('Age',
+        ActiveDynamic::DataType::Integer,
+        'value for age',
+        false),
       ActiveDynamic::AttributeDefinition.new('Please, tell us what is your home town',
-                                             datatype: ActiveDynamic::DataType::Text,
-                                             system_name: 'home_town')
+        ActiveDynamic::DataType::String,
+        nil,
+        false,
+        system_name: 'Home Town'
+        )
     ]
   end
 

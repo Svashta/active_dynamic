@@ -1,3 +1,3 @@
 module ActiveDynamic
-  VERSION = '0.5.6'.freeze
+  VERSION = '0.5.4'.freeze
 end
